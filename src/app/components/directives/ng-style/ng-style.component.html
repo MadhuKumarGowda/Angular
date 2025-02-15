@@ -1,0 +1,19 @@
+<hr/>
+<label> ngStyle Directives</label>
+<div class="grid grid-cols-1 border border-gray-300 rounded-2xl">
+     <p [ngStyle]="{'background-color':selectedColor}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, similique.</p>
+</div>
+<div class="grid grid-cols-1 border w-1/2 border-gray-300 rounded-2xl gap-2">
+    <button class="p-2  bg-orange-600 rounded-2xl text-white" (click)="addColor('orange')"> Add Orange </button>
+    <button class="p-2  bg-green-600 rounded-2xl text-white" (click)="addColor('green')"> Add Green </button>
+</div>
+
+<label> ngStyle Directives based on Conditions</label>
+<div class="grid grid-cols-1 border border-gray-300 rounded-2xl mt-2 p-3">
+    <p [ngStyle]="{'background-color':isChecked == true ? 'green' : 'red'}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, similique.</p>
+    <div>
+        <input type="checkbox" [(ngModel)]="isChecked" />
+    </div>
+</div>
+
+

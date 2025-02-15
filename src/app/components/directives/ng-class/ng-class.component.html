@@ -1,0 +1,21 @@
+<hr>
+<label> ngClass Directive</label>
+<div class="grid grid-cols-1">
+   <div [ngClass]="primaryDiv"> <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, eligendi.</P></div>
+   <div [ngClass]="secondaryDiv"> <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. A debitis totam, sit autem quidem excepturi!</P></div>
+</div>
+<div class="grid grid-cols-1">
+    <div [ngClass]="dynamicFontColor"> <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, eligendi.</P></div>
+    <button class="p-2 w-1/2 bg-purple-500 rounded-2xl text-white" (click)="toggleTextColor()">Change the text to {{dynamicText}}</button>
+    
+ </div>
+ <hr />
+ <div class="grid grid-cols-1">
+    <label>ngClass based on condition</label>
+    <div [ngClass]="isTermAgreed == true ? 'text-green-900' : 'text-red-600'">
+        <p> Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div><input type="checkbox" [(ngModel)] = "isTermAgreed" (change)="toggleText()" /> {{termAgreedText}}</div>
+ </div>
+ 
+
