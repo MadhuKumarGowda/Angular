@@ -1,0 +1,11 @@
+<label class="text-3xl"> Directives - ngIf</label>
+<div class="grid grid-cols-1">
+    <div *ngIf="isLabelVisible">
+        <label> Welcome to Angular Directive Session</label>
+    </div>  
+    
+    <div class="flex justify-center items-center gap-1 text-center">
+        <button type="button" class="bg-red-500 text-white p-2 rounded-2xl" (click)="toggleLabel()"> Hide Label</button>
+        <button type="button" class="bg-green-600 text-black p-2 rounded-2xl" (click)="toggleLabel()"> Show Label</button>
+    </div>
+</div>
