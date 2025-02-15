@@ -1,0 +1,15 @@
+<h3>Linked Signals</h3>
+<div class="flex flex-row justify-start items-start gap-2">
+    <div><input type="text" class="border border-gray-300 p-3" placeholder="Enter your age to check the eligibility" [(ngModel)]="age" /></div>
+    <!-- <div><button class="bg-gray-600 p-2 border border-gray-200 text-white" (click)="validateAge()">Validate the Age.</button></div> -->
+    <div>
+        @if(isEligibaleforVoting() == 'Yes'){
+            <p> 🎉🎉🎉, you are eligible </p>
+        }@else{
+            <p> 😞😞😞, Sorry, you aren't eligible </p>
+        }
+    </div>
+    <br/>
+    <div> <p> Generated Auto email is {{generateAutoEmail()}}</p></div>
+</div>
+
