@@ -1,0 +1,14 @@
+<div class="grid grid-cols-1">
+    <label> ngFor</label>
+    <ul>
+        <li *ngFor="let city of cityList; let i=index"> {{i+1}} - {{city}}</li>
+    </ul>
+    
+    <div>
+        <select class="border-gray-300 rounded-4xl p-2 px-4 w-[15] border-1 focus:border-1 focus:outline-0">
+            <option *ngFor="let emp of employeeList" [value]="emp.id">{{emp.name}} - {{emp.age}}</option>
+        </select>
+    </div>
+    <hr />
+</div>
+
