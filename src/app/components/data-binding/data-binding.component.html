@@ -1,0 +1,43 @@
+<div class="m-4">
+<hr class="border-b-1 border-gray-500" />
+<label class="text-center">Interpolation Example</label>
+<div class="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-2">    
+    <div> Name {{firstName}} </div>
+    <div> Age {{age}} </div>
+    <div> Active Status {{isActive}} </div>
+</div>
+<hr class="border-b-1 border-gray-500" />
+<label class="text-center mt-4">Property Binding</label>
+<div class="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-2">    
+    <input class="border-gray-300 rounded-4xl py-2 px-4 w-2/4 border-1 focus:border-1 focus:outline-0" type="text" [value]="firstName" name="username" />
+</div>
+<hr class="border-b-1 border-gray-500" />
+<label class="text-center mt-4">Event Binding</label>
+<div>
+    <button class="p-2 bg-purple-500 rounded-full text-white" (click)="showMessage()"> Click to View Message</button>
+</div>
+<div>
+    <select (change)="cityChangedEvent()" class="border-1 border-gray-500 p-2 mt-2 rounded-3xl">
+        <option value="mysore">Mysore</option>
+        <option value="Madikere">Madikere</option>
+        <option value="Kodagu">Kodagu</option>
+        <option value="Mandya">Mandya</option>       
+    </select>
+</div>
+<hr class="border-b-1 border-gray-500" />
+<label class="text-center mt-4">2 Way Data Binding</label>
+      <div>
+        <input class="border-gray-300 rounded-4xl py-2 px-4 w-2/4 border-1 focus:border-1 focus:outline-0" type="text" name="enteredText" [(ngModel)]="firstName" />
+      </div>
+      <div>
+        <select [(ngModel)]="selectedCity" class="border-1 border-gray-500 p-2 mt-2 rounded-3xl">
+            <option value="select" selected>Select City</option>
+            <option value="mysore">Mysore</option>
+            <option value="Madikere">Madikere</option>
+            <option value="Kodagu">Kodagu</option>
+            <option value="Mandya">Mandya</option>       
+        </select>
+        <label class="mx-3">{{selectedCity}}</label>
+    </div>
+</div>
+
