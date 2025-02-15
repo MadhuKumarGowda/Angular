@@ -1,0 +1,65 @@
+<h3 class="text-center"> Control Flow Statements </h3>
+<div class="grid grid-cols-2 gap-3 text-center">
+    <h4 > If else if </h4>
+    @if(isBtnClicked == true){
+        <p> Control Flow Statement is visible </p>
+    }
+</div>
+<div class="grid grid-cols-2 gap-3">
+ <button class="w-[10] text-white p-2 rounded-2xl bg-amber-950" (click)="setVisibleStatus(true)"> Show Text</button>
+ <button class="w-[10] text-white p-2 rounded-2xl bg-amber-950" (click)="setVisibleStatus(false)"> Hide Text</button>
+</div>
+
+<div class="grid grid-cols-2 gap-3 mt-2">
+    @if(isChecked == true){
+        <p> Checkbox Checked and you agreed for Terms and Conditions </p>
+    } @else{
+        <p> Checkbox not Checked yet and Please agree for Terms and Conditions </p>
+    }
+</div>
+<div class="grid grid-cols-2 gap-3">
+ <input type="checkbox" [(ngModel)]="isChecked">
+</div>
+<hr/>
+<div class="grid grid-cols-1 text-center">
+    <h4> for statement </h4>
+    <select class="w-[12rem] focus:outline-0 p-2 border border-gray-500">
+        @for(item of cityList; track $index){
+            <option value="{{item.id}}"> {{item.name}} - {{ item.population }}</option>
+        }
+    </select>
+    <br/>
+    <table class="table-auto border-separate border-spacing-2 border border-gray-400 dark:border-gray-500">
+        <thead>
+            <tr class="border border-gray-300 dark:border-gray-600">
+                <td>Sl No.</td>
+                <th>id</th>
+                <th>name</th>
+                <th>population</th>
+                <th>isMetro City</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(city of cityList; track $index){
+                <tr class="border border-gray-300 dark:border-gray-600">
+                    <td>{{$index+1}}</td>
+                    <td>{{city.id}}</td>
+                    <td>{{city.name}}</td>
+                    <td>{{city.population}}</td>
+                    <td>
+                        @if(city.isMetro == true){
+                            <label> Yes</label>    
+                        }
+                        @else{
+                            <label> No</label>  
+                        }
+                    </td>                
+                </tr>
+            }
+           
+        </tbody>
+    </table>
+    
+
+</div>
+

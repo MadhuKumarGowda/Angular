@@ -1,20 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
-import { NgforComponent } from './components/directives/ngfor/ngfor.component';
-import { NgifComponent } from './components/directives/ngif/ngif.component';
-import { NgClassComponent } from './components/directives/ng-class/ng-class.component';
-import { NgStyleComponent } from './components/directives/ng-style/ng-style.component';
+import { ControlFlowComponent } from './components/control-flow/control-flow.component';
 
 @Component({
   selector: 'app-root',
-  imports: [
-    RouterOutlet,
-    NgforComponent,
-    NgifComponent,
-    NgClassComponent,
-    NgStyleComponent,
-  ],
+  imports: [RouterOutlet, ControlFlowComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
