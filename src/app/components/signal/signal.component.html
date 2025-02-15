@@ -1,0 +1,11 @@
+<h3> Angular Signals</h3>
+<h5> Signals can be accessed as method</h5>
+<h6>Update the signal by Set method</h6>
+<p> <label> {{firstName()}}</label> <br/> <span>{{age()}}</span></p>
+<hr/>
+<h6>Non Signal variable, but this values are get updated when signal update with latest changes by set or update methods in the absence of auto change detection</h6>
+<p><label> Course Name {{courseName}}</label></p>
+<br/>
+<h6>Update the signal by Update method</h6>
+<p><label>Button has clicked {{counter()}} times</label></p>
+<button class="border border-gray-400 bg-gray-700 text-white p-2" (click)="incrementCounter()"> Counter Increment</button>
