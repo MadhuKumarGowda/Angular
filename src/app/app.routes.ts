@@ -7,6 +7,7 @@ import { NgStyleComponent } from './components/directives/ng-style/ng-style.comp
 import { ControlFlowComponent } from './components/control-flow/control-flow.component';
 import { SignalComponent } from './components/signal/signal.component';
 import { LinkedSignalComponent } from './components/linked-signal/linked-signal.component';
+import { TemplateFormComponent } from './components/forms/template-form/template-form.component';
 
 export const routes: Routes = [
   // below is default route, full means complete route and prefix is only routing value
@@ -19,4 +20,5 @@ export const routes: Routes = [
   { path: 'controlFlow', component: ControlFlowComponent },
   { path: 'Signal', component: SignalComponent },
   { path: 'LinkedSignal', component: LinkedSignalComponent },
+  { path: 'TemplateForm', component: TemplateFormComponent },
 ];
