@@ -21,7 +21,8 @@ export class AppComponent {
     { path: 'ngStyle', name: 'Directives-ngStyle' },
     { path: 'controlFlow', name: 'ControlFlow' },
     { path: 'Signal', name: 'Signal' },
-    { path: 'LinkedSignal', name: 'LinkedSignal' },
+    { path: 'LinkedSignal', name: 'Linked Signal' },
+    { path: 'TemplateForm', name: 'Template Form' },
   ];
 
   constructor(private router: Router) {}
