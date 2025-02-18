@@ -1,13 +1,33 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { SignalComponent } from './components/signal/signal.component';
+import { Router, RouterOutlet } from '@angular/router';
 
+interface ITopics {
+  path: string;
+  name: string;
+}
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, SignalComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'angular19-sample';
+  title = 'angular19-concepts';
+  topicList: ITopics[] = [
+    { path: 'databinding', name: 'DataBinding' },
+    { path: 'ngIf', name: 'Directives-ngIf' },
+    { path: 'ngFor', name: 'Directives-ngFor' },
+    { path: 'ngClass', name: 'Directives-ngClass' },
+    { path: 'ngStyle', name: 'Directives-ngStyle' },
+    { path: 'controlFlow', name: 'ControlFlow' },
+    { path: 'Signal', name: 'Signal' },
+    { path: 'LinkedSignal', name: 'LinkedSignal' },
+  ];
+
+  constructor(private router: Router) {}
+
+  navigate = (event: Event): void => {
+    const selectedPath = (event.target as HTMLSelectElement).value;
+    this.router.navigate([selectedPath]);
+  };
 }
