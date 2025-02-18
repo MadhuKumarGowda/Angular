@@ -23,6 +23,7 @@ export class AppComponent {
     { path: 'Signal', name: 'Signal' },
     { path: 'LinkedSignal', name: 'Linked Signal' },
     { path: 'TemplateForm', name: 'Template Form' },
+    { path: 'ReactiveForm', name: 'Reactive Form' },
   ];
 
   constructor(private router: Router) {}
