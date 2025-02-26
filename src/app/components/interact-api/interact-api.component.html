@@ -1,0 +1,43 @@
+<h3>Http API Integration</h3>
+<div class="flex-col justify-center items-center">
+    <div class="flex justify-center items-center gap-3">
+    <div> 
+        <button class="border-t-neutral-400 px-3 py-2 bg-purple-700 text-white rounded-4xl" (click)="getTodoList()"> Load Todo Tasks</button>
+    </div>
+    <div> 
+        <button class="border-t-neutral-400 px-3 py-2 bg-purple-700 text-white rounded-4xl" (click)="reset()"> Reset</button>
+    </div>
+</div>
+    <br/>
+<div class="w-full">
+    @if(toDoList.length > 0){
+        <table class="min-w-full divide-y divide-gray-200 dark:divide-neutral-700 border border-gray-400">
+            <thead>
+                <tr class="border border-gray-400">
+                    <th class="border border-gray-400 font-bold p-1 text-center">SL #</th>
+                    <th class="border border-gray-400 font-bold p-1 text-center">ID</th>
+                    <th class="border border-gray-400 font-bold p-1 text-center">Title</th>
+                    <th class="border border-gray-400 font-bold p-1 text-center">Completed</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (todo of toDoList; track $index){
+                    <tr class="border border-gray-400">
+                        <td class="border border-gray-400 p-1 text-center">{{$index + 1}}</td>
+                        <td class="border border-gray-400 p-1 text-center">{{todo.id}}</td>
+                        <td class="border border-gray-400 p-1 text-center">{{todo.title}}</td>
+                        @if(todo.completed === false){
+                            <td class="border border-gray-400 p-1 text-center">No</td> 
+                        }@else{
+                            <td class="border border-gray-400 p-1 text-center">Yes</td>
+                        }
+                        
+                    </tr>
+                }
+               
+            </tbody>
+        </table>
+    }
+   
+</div>
+</div>
