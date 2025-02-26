@@ -25,6 +25,7 @@ export class AppComponent {
     { path: 'TemplateForm', name: 'Template Form' },
     { path: 'ReactiveForm', name: 'Reactive Form' },
     { path: 'APIIntegration', name: 'API Integration' },
+    { path: 'ResourceAPI', name: 'Resource API' },
   ];
 
   constructor(private router: Router) {}
