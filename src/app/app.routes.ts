@@ -9,6 +9,8 @@ import { SignalComponent } from './components/signal/signal.component';
 import { LinkedSignalComponent } from './components/linked-signal/linked-signal.component';
 import { TemplateFormComponent } from './components/forms/template-form/template-form.component';
 import { ReactiveFormComponent } from './components/forms/reactive-form/reactive-form.component';
+import { InteractAPIComponent } from './components/interact-api/interact-api.component';
+import { ResourceApiComponent } from './components/resource-api/resource-api.component';
 
 export const routes: Routes = [
   // below is default route, full means complete route and prefix is only routing value
@@ -23,4 +25,6 @@ export const routes: Routes = [
   { path: 'LinkedSignal', component: LinkedSignalComponent },
   { path: 'TemplateForm', component: TemplateFormComponent },
   { path: 'ReactiveForm', component: ReactiveFormComponent },
+  { path: 'APIIntegration', component: InteractAPIComponent },
+  { path: 'ResourceAPI', component: ResourceApiComponent },
 ];
