@@ -1,0 +1,42 @@
+<h3>{{title | titlecase }}</h3>
+<div class="flex flex-col justify-start items-start gap-2">
+    <div> <h4> Json Pipes : <span class="text-md font-normal"> {{cityList | json}}</span></h4>  </div>
+    <div> <h4> Date Pipes [date]: <span class="text-md font-normal"> {{todayDate | date}}</span></h4> </div>
+    <div> <h4> Date Pipes [dd-MMM-yyyy] : <span class="text-md font-normal"> {{todayDate | date:'dd-MMM-yyyy'}}</span></h4>  </div>
+    <div> <h4> Date Pipes [dd/MM/yyyy]:<span class="text-md font-normal"> {{todayDate | date:'dd/MM/yyyy'}}</span></h4> </div>
+    <div> <h4> Date with Time Pipes [hh:mm:ss] : <span class="text-md font-normal"> {{todayDate | date:'hh:mm:ss'}}</span></h4> </div>
+    <div>
+        <table class="table-auto border-separate border-spacing-2 border border-gray-400 dark:border-gray-500">
+            <thead>
+                <tr class="border border-gray-300 dark:border-gray-600">
+                    <th class="border border-gray-300 dark:border-gray-600 p-1 text-center">Sl No.</th>
+                    <th class="border border-gray-300 dark:border-gray-600 p-1 text-center">id</th>
+                    <th class="border border-gray-300 dark:border-gray-600 p-1 text-center">name</th>
+                    <th class="border border-gray-300 dark:border-gray-600 p-1 text-center">population</th>
+                    <th class="border border-gray-300 dark:border-gray-600 p-1 text-center">isMetro City</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(city of cityList; track $index){
+                    <tr class="border border-gray-300 dark:border-gray-600">
+                        <td class="border border-gray-300 dark:border-gray-600 p-1 text-center">{{$index+1}}</td>
+                        <td>{{city.id}}</td>
+                        <td class="border border-gray-300 dark:border-gray-600 p-1 text-center">{{city.name | nAPipes}}</td>
+                        <td class="border border-gray-300 dark:border-gray-600 p-1 text-center">{{city.population}}</td>
+                        <td class="border border-gray-300 dark:border-gray-600 p-1 text-center">
+                            @if(city.isMetro == true){
+                                <label> Yes</label>    
+                            }
+                            @else{
+                                <label> No</label>  
+                            }
+                        </td>                
+                    </tr>
+                }
+               
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+
