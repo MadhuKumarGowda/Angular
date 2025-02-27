@@ -14,6 +14,7 @@ interface ITopics {
 export class AppComponent {
   title = 'angular19-concepts';
   topicList: ITopics[] = [
+    { path: 'LifeCycle', name: 'Component Life Cycle' },
     { path: 'databinding', name: 'DataBinding' },
     { path: 'ngIf', name: 'Directives-ngIf' },
     { path: 'ngFor', name: 'Directives-ngFor' },
