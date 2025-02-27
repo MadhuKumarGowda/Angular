@@ -27,6 +27,7 @@ export class AppComponent {
     { path: 'ReactiveForm', name: 'Reactive Form' },
     { path: 'APIIntegration', name: 'API Integration' },
     { path: 'ResourceAPI', name: 'Resource API' },
+    { path: 'Pipes', name: 'Angular Pipes' },
   ];
 
   constructor(private router: Router) {}
