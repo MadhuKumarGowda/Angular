@@ -11,6 +11,7 @@ import { TemplateFormComponent } from './components/forms/template-form/template
 import { ReactiveFormComponent } from './components/forms/reactive-form/reactive-form.component';
 import { InteractAPIComponent } from './components/interact-api/interact-api.component';
 import { ResourceApiComponent } from './components/resource-api/resource-api.component';
+import { LifeCycleComponent } from './components/life-cycle/life-cycle.component';
 
 export const routes: Routes = [
   // below is default route, full means complete route and prefix is only routing value
@@ -27,4 +28,5 @@ export const routes: Routes = [
   { path: 'ReactiveForm', component: ReactiveFormComponent },
   { path: 'APIIntegration', component: InteractAPIComponent },
   { path: 'ResourceAPI', component: ResourceApiComponent },
+  { path: 'LifeCycle', component: LifeCycleComponent },
 ];
