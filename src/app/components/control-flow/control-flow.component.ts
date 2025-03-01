@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ProgressBarComponent } from '../../shared/progress-bar/progress-bar.component';
 
 interface ICity {
   id: number;
@@ -9,7 +10,7 @@ interface ICity {
 }
 @Component({
   selector: 'app-control-flow',
-  imports: [FormsModule],
+  imports: [FormsModule, ProgressBarComponent],
   templateUrl: './control-flow.component.html',
   styleUrl: './control-flow.component.css',
 })

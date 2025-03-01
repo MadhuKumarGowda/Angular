@@ -28,6 +28,7 @@ export class AppComponent {
     { path: 'APIIntegration', name: 'API Integration' },
     { path: 'ResourceAPI', name: 'Resource API' },
     { path: 'Pipes', name: 'Angular Pipes' },
+    { path: 'EventEmitters', name: 'Event Emitters' },
   ];
 
   constructor(private router: Router) {}
