@@ -13,6 +13,7 @@ import { InteractAPIComponent } from './components/interact-api/interact-api.com
 import { ResourceApiComponent } from './components/resource-api/resource-api.component';
 import { LifeCycleComponent } from './components/life-cycle/life-cycle.component';
 import { PipesComponent } from './components/pipes/pipes.component';
+import { EventemitterComponent } from './components/eventemitter/eventemitter.component';
 
 export const routes: Routes = [
   // below is default route, full means complete route and prefix is only routing value
@@ -31,4 +32,5 @@ export const routes: Routes = [
   { path: 'ResourceAPI', component: ResourceApiComponent },
   { path: 'LifeCycle', component: LifeCycleComponent },
   { path: 'Pipes', component: PipesComponent },
+  { path: 'EventEmitters', component: EventemitterComponent },
 ];

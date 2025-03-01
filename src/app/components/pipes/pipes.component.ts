@@ -1,6 +1,6 @@
 import { DatePipe, JsonPipe, TitleCasePipe } from '@angular/common';
 import { Component } from '@angular/core';
-import { NAPipesPipe } from '../../pipes/napipes.pipe';
+import { NAPipesPipe } from '../../custompipe/napipes.pipe';
 
 interface ICity {
   id: number;
